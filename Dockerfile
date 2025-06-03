@@ -2,7 +2,7 @@
 FROM python:3.11
 
 # Set DNS fallback
-RUN echo "nameserver 9.9.9.9" > /etc/resolv.conf
+#RUN echo "nameserver 9.9.9.9" > /etc/resolv.conf
 
 # Install required packages
 RUN apt-get update && \
