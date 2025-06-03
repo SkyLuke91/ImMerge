@@ -1,4 +1,4 @@
-# IMMERGE
+# ImMerge
 IMMICH Montage &amp; Media Engine for Rendering Gallery Experiences
 
 A self-hosted, Dockerized Python application that automatically creates video montages from photo albums stored in [Immich](https://github.com/immich-app/immich). The generated videos are filtered for duplicate/similar images, trimmed for long videos, and combined with optional background music using `ffmpeg`. The final montage is automatically uploaded back to Immich.
