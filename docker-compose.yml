@@ -1,7 +1,10 @@
 services:
-  immich-montage:
+  immerge:
     build: .
     env_file:
       - .env
     volumes:
-      - ./data:/data
+      - ./main.py:/app/main.py
+      - ./utils:/app/utils
+      - ./data:/app/data
+      - ./.env:/app/.env

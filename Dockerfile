@@ -1,8 +1,5 @@
 # Use full Debian base with Python
-FROM python:3.11
-
-# Set DNS fallback
-#RUN echo "nameserver 9.9.9.9" > /etc/resolv.conf
+FROM python:3.11-slim
 
 # Install required packages
 RUN apt-get update && \
