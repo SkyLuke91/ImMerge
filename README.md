@@ -40,21 +40,19 @@ A self-hosted, Dockerized Python application that automatically creates video mo
 All settings are managed in the `.env` file:
 
 ```
-IMMICH_BASE_URL=http://immich-server:2283
-IMMICH_API_KEY=your-immich-api-key
-
-PHOTO_SIMILARITY_THRESHOLD=5        # Lower is more strict
-MAX_VIDEO_DURATION=5                # Seconds
-ALLOWED_EXTENSIONS=.jpg,.png,.mp4
-
-RESOLUTION=1080p                    # or 4k
-PHOTO_DURATION=3                    # Seconds per photo
-
-OUTPUT_DIR=/data/output
-TEMP_DIR=/data/temp
-MUSIC_FILE=/data/background.mp3
-
-CRON_INTERVAL_MINUTES=1440          # Every 24 hours
+IMMICH_BASE_URL=https://your.immich.address/	#base port is 2283
+IMMICH_API_KEY=immich API KEY
+PHOTO_SIMILARITY_THRESHOLD=0.64	#higher value means more similar photos selected (0-1)
+PHOTO_DUPLICATE_THRESHOLD=5	#lower value means more similar photos selected (0-10)
+MAX_VIDEO_DURATION=10 #not ready jet will trim video files at this length
+ALLOWED_EXTENSIONS=.jpg,.jpeg,.png,.mp4,.mov
+RESOLUTION=1080p	#1080p or 4k
+PHOTO_DURATION=2	#how long each photo to be shown
+OUTPUT_DIR=/app/data/output 
+TEMP_DIR=/app/data/temp
+MUSIC_DIR=/app/data
+CRON_INTERVAL_MINUTES=1440	#cron interval in minutes
+CLEANUP_AFTER_UPLOAD=yes	#yes - will delete all temp files after generating and uploading montage
 ```
 ## 🚀 Deployment Instructions
 ### Clone and Unpack
